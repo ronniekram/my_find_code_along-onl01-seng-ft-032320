@@ -5,8 +5,10 @@ def my_find(collection)
   i = 0
   #while loops through array
   while i < collection.length
-  #stops at each element 
-    yield(collection[i])
+  #if yield, it stops at each element
+    if yield(collection[i])
+      #returns element of array
+      return collection[i]
     #counts through array indexes
     i += 1
   end
